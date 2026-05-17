@@ -187,9 +187,3 @@ src/app/App.tsx
 src/config/site.ts
 ```
 # partikportfolio
-# partikportfolio
-# Portfolio
-# Portfolio
-# Portfolio
-# Portfolio
-# Portfolio
