@@ -40,7 +40,9 @@ export default function HomePage() {
               Hard work. Play hard. Lead with grace.
             </p>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-              A calm and traditional personal brand built for future leadership, public service, and business planning. The focus is neutral, disciplined, and rooted in respect.
+              A calm and traditional personal brand built for future leadership,
+              public service, and business planning. The focus is neutral,
+              disciplined, and rooted in respect.
             </p>
             <p className="mt-3 max-w-2xl text-base font-semibold leading-7 text-slate-600">
               मेहनत, अनुशासन र सेवाको भावनाबाट अगाडि बढ्ने नेतृत्व यात्रा।
@@ -49,9 +51,16 @@ export default function HomePage() {
 
             <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
               {profileStats.map(([label, value]) => (
-                <div key={label} className="rounded-lg border border-slate-200 bg-white p-4">
-                  <strong className="block text-xl font-black text-slate-950">{value}</strong>
-                  <span className="mt-1 block text-xs font-bold uppercase tracking-wide text-slate-500">{label}</span>
+                <div
+                  key={label}
+                  className="rounded-lg border border-slate-200 bg-white p-4"
+                >
+                  <strong className="block text-xl font-black text-slate-950">
+                    {value}
+                  </strong>
+                  <span className="mt-1 block text-xs font-bold uppercase tracking-wide text-slate-500">
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -61,12 +70,14 @@ export default function HomePage() {
             <div className="aspect-[4/5] overflow-hidden rounded-lg bg-slate-200 shadow-soft">
               <img
                 className="h-full w-full object-cover object-[50%_12%]"
-                src="/profile/partik-full.jpeg"
+                src="./profile/partik-full.jpeg"
                 alt="Partik Gautam full formal portrait"
               />
             </div>
             <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-white/94 p-5 shadow-lg backdrop-blur">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Neutral Leadership</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">
+                Neutral Leadership
+              </p>
               <p className="mt-2 text-lg font-black text-slate-950">
                 सेवा, अनुशासन र दीर्घकालीन सोच।
               </p>
@@ -85,9 +96,16 @@ export default function HomePage() {
             />
             <div className="grid gap-4 sm:grid-cols-3">
               {pillars.map((item) => (
-                <article key={item.title} className="rounded-lg border border-slate-200 bg-white p-6">
-                  <h3 className="text-xl font-black text-slate-950">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                <article
+                  key={item.title}
+                  className="rounded-lg border border-slate-200 bg-white p-6"
+                >
+                  <h3 className="text-xl font-black text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    {item.text}
+                  </p>
                 </article>
               ))}
             </div>
