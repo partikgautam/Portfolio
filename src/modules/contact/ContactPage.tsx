@@ -8,15 +8,18 @@ export default function ContactPage() {
 
   return (
     <main>
-      <section className="bg-blue-50 py-20">
+      <section className="bg-stone-50 py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">Contact</p>
             <h1 className="mt-4 text-5xl font-black tracking-tight text-slate-950 sm:text-6xl">
-              Tell us about your business. We will suggest a growth plan.
+              Connect for leadership, service, or business discussion.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-700">
-              Call, WhatsApp, email, or send the form. For faster replies, WhatsApp is the best option.
+              Use this page for formal communication with Partik Gautam. Phone, email, address, and the contact form are ready for direct enquiries.
+            </p>
+            <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
+              सम्पर्कका लागि फोन, इमेल वा सन्देश फारम प्रयोग गर्न सक्नुहुन्छ।
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -25,7 +28,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp Now
+                WhatsApp
               </a>
               <a
                 className="rounded-full bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue ring-1 ring-blue-200 hover:text-brand-orange"
@@ -39,8 +42,8 @@ export default function ContactPage() {
           <div className="grid gap-4">
             <ContactInfo label="Phone" value={siteConfig.phoneDisplay} href={siteConfig.phoneHref} />
             <ContactInfo label="Email" value={siteConfig.email} href={`mailto:${siteConfig.email}`} />
-            <div className="rounded-3xl bg-white p-6 shadow-sm">
-              <span className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Location</span>
+            <div className="rounded-lg bg-white p-6 shadow-sm">
+              <span className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Address</span>
               <p className="mt-2 text-2xl font-black text-slate-950">{siteConfig.location}, Nepal</p>
             </div>
           </div>
@@ -51,11 +54,10 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <SectionHeading
-              eyebrow="Project Form"
-              title="What should we promote?"
-              description="This frontend is ready for a future NestJS backend. For now, submitting opens your email app with the enquiry details."
+              eyebrow="Message Form"
+              title="Send a formal message."
+              description="Submitting opens your email app with the message details. A backend can be connected later when the website becomes more public."
             />
-            {/* Future backend note: connect this form to a NestJS POST /leads endpoint later. */}
           </div>
 
           <form className="grid gap-5" onSubmit={handleSubmit}>
@@ -63,11 +65,11 @@ export default function ContactPage() {
               <TextField label="Your Name" name="name" value={formData.name} onChange={updateField} required />
               <TextField label="Phone Number" name="phone" type="tel" value={formData.phone} onChange={updateField} required />
             </div>
-            <TextField label="Business Name" name="businessName" value={formData.businessName} onChange={updateField} />
+            <TextField label="Organization / Address" name="businessName" value={formData.businessName} onChange={updateField} />
             <label className="grid gap-2 text-sm font-bold text-slate-700">
-              Service Needed
+              Purpose
               <select
-                className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+                className="rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
                 name="service"
                 value={formData.service}
                 onChange={updateField}
@@ -80,7 +82,7 @@ export default function ContactPage() {
             <label className="grid gap-2 text-sm font-bold text-slate-700">
               Message
               <textarea
-                className="min-h-36 rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+                className="min-h-36 rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
                 name="message"
                 value={formData.message}
                 onChange={updateField}
@@ -108,7 +110,7 @@ type ContactInfoProps = {
 
 function ContactInfo({ label, value, href }: ContactInfoProps) {
   return (
-    <div className="rounded-3xl bg-white p-6 shadow-sm">
+    <div className="rounded-lg bg-white p-6 shadow-sm">
       <span className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">{label}</span>
       <a className="mt-2 block break-all text-2xl font-black text-slate-950 hover:text-brand-orange" href={href}>
         {value}
@@ -131,7 +133,7 @@ function TextField({ label, name, type = "text", value, onChange, required = fal
     <label className="grid gap-2 text-sm font-bold text-slate-700">
       {label}
       <input
-        className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+        className="rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
         name={name}
         type={type}
         value={value}

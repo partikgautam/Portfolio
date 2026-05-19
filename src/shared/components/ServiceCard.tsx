@@ -13,7 +13,7 @@ type ServiceCardProps = {
 
 export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
-    <article className="card-hover rounded-3xl border border-slate-200 bg-white p-7">
+    <article className="card-hover rounded-lg border border-slate-200 bg-white p-7">
       <div className="flex items-center justify-between gap-4">
         <span className={`rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${accentClasses[service.accent]}`}>
           {service.eyebrow}

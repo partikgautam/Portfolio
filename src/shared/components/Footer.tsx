@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <Logo dark />
           <p className="mt-5 max-w-md text-sm leading-7 text-white/70">
-            Grow Up helps businesses become easier to discover, trust, and contact through content, campaigns, and video promotion.
+            A formal personal profile for leadership, service, business vision, and future planning.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs font-semibold text-white/55">
-        Copyright 2026 Grow Up. All rights reserved.
+        Copyright 2026 Partik Gautam. All rights reserved.
       </div>
     </footer>
   );

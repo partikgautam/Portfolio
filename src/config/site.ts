@@ -19,11 +19,11 @@ export type NavLink = {
 };
 
 export const siteConfig: SiteConfig = {
-  businessName: "Grow Up",
-  shortName: "GU",
-  tagline: "Video-first digital marketing for growing businesses.",
+  businessName: "Partik Gautam",
+  shortName: "PG",
+  tagline: "Hard work. Play hard. Lead with grace.",
   description:
-    "Grow Up helps companies attract customers through promotion videos, social media content, paid ads, branding, and practical marketing strategy.",
+    "A formal personal profile for leadership, service, business vision, and future public planning rooted in calm traditional values.",
   location: "Butwal",
   email: "partikgautam11@gmail.com",
 
@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
   phoneDisplay: "9746407187",
   phoneHref: "tel:+9779746407187",
   whatsappHref:
-    "https://wa.me/9779746407187?text=Hello%20Grow%20Up%2C%20I%20want%20digital%20marketing%20for%20my%20business.",
+    "https://wa.me/9779746407187?text=Namaste%20Partik%20Gautam%2C%20I%20would%20like%20to%20connect.",
 
   /*
     SOCIAL MEDIA LINKS:
@@ -56,7 +56,7 @@ export const siteConfig: SiteConfig = {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Future Plan", href: "/future-plan" },
+  { label: "Business", href: "/business" },
   { label: "Contact", href: "/contact" },
 ];

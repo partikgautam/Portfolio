@@ -6,7 +6,7 @@ type CtaButtonsProps = {
   secondaryLabel?: string;
 };
 
-export default function CtaButtons({ secondaryTo = "/services", secondaryLabel = "View Services" }: CtaButtonsProps) {
+export default function CtaButtons({ secondaryTo = "/future-plan", secondaryLabel = "Future Plan" }: CtaButtonsProps) {
   return (
     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
       <a
@@ -15,7 +15,7 @@ export default function CtaButtons({ secondaryTo = "/services", secondaryLabel =
         rel="noopener noreferrer"
         className="rounded-full bg-brand-orange px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-orange-500/25 transition hover:bg-orange-600"
       >
-        Start on WhatsApp
+        Connect on WhatsApp
       </a>
       <Link
         to={secondaryTo}

@@ -1,102 +1,85 @@
-import { siteConfig } from "../../config/site";
 import CtaButtons from "../../shared/components/CtaButtons";
 import SectionHeading from "../../shared/components/SectionHeading";
-import { StrategyVisual } from "../../shared/components/VisualMockups";
 
 const values = [
   {
-    title: "Clear",
-    text: "Messaging customers understand",
-    className: "bg-blue-50 text-brand-blue",
+    title: "Grace",
+    text: "A calm public presence with respect for tradition and people.",
   },
   {
-    title: "Active",
-    text: "Content that keeps pages alive",
-    className: "bg-orange-50 text-brand-orange",
+    title: "Discipline",
+    text: "Hard work, consistency, and personal responsibility in every step.",
   },
   {
-    title: "Trusted",
-    text: "Brand presence that builds confidence",
-    className: "bg-yellow-50 text-yellow-600",
+    title: "Service",
+    text: "Leadership that remains close to community needs and public trust.",
   },
 ];
 
-const reasons = [
-  {
-    title: "Business-first planning",
-    text: "We start with your business goal, not just random posts or videos.",
-  },
-  {
-    title: "Video-led content",
-    text: "Short video is the strongest way to explain, promote, and build trust quickly.",
-  },
-  {
-    title: "Local market understanding",
-    text: "Based in Butwal, we understand how local business owners and customers think.",
-  },
-  {
-    title: "Direct communication",
-    text: "Clients can call or message directly, making work faster and easier.",
-  },
+const principles = [
+  "Neutral leadership with a focus on unity",
+  "Respect for culture, family values, and public dignity",
+  "Business thinking guided by trust and long-term planning",
+  "Future political or public work shaped through service first",
 ];
 
 export default function AboutPage() {
   return (
     <main>
-      <section className="bg-blue-50 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
+      <section className="bg-stone-50 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+          <div className="overflow-hidden rounded-lg bg-slate-200 shadow-soft">
+            <img
+              className="h-[560px] w-full object-cover object-[50%_20%]"
+              src="/profile/partik-profile.jpeg"
+              alt="Formal profile portrait of Partik Gautam"
+            />
+          </div>
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">About Grow Up</p>
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">About Partik Gautam</p>
             <h1 className="mt-4 text-5xl font-black tracking-tight text-slate-950 sm:text-6xl">
-              We turn local businesses into brands people remember.
+              A personal brand for leadership, service, and future planning.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-700">
-              Grow Up is built for business owners who want better visibility, better content, and better customer response from digital platforms.
+              Partik Gautam presents himself with a formal, calm, and traditional leadership style. This profile is not built around content creation; it is built around credibility, public identity, business direction, and service-minded growth.
             </p>
-            <CtaButtons secondaryTo="/portfolio" secondaryLabel="See Ideas" />
+            <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+              यो परिचय नेतृत्व, सेवा र भविष्यको योजनालाई सम्मानजनक तरिकाले अगाडि बढाउन तयार गरिएको हो।
+            </p>
+            <CtaButtons secondaryTo="/future-plan" secondaryLabel="Future Plan" />
           </div>
-          <StrategyVisual />
         </div>
       </section>
 
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-3">
-            <SectionHeading eyebrow="Our Belief" title="A business grows when people understand it quickly." />
-            <div className="lg:col-span-2">
-              <p className="text-lg leading-8 text-slate-600">
-                Many companies have good services, but their digital presence does not explain the value clearly.
-                {` ${siteConfig.businessName}`} helps fix that with simple messaging, strong visuals, short videos, and campaigns that make customers take action.
-              </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {values.map((item) => (
-                  <div key={item.title} className={`rounded-3xl p-6 ${item.className}`}>
-                    <strong className="block text-3xl font-black">{item.title}</strong>
-                    <span className="mt-2 block text-sm font-semibold text-slate-600">{item.text}</span>
-                  </div>
-                ))}
-              </div>
+            <SectionHeading eyebrow="Core Values" title="Formal presence with practical purpose." />
+            <div className="grid gap-4 sm:grid-cols-3 lg:col-span-2">
+              {values.map((item) => (
+                <article key={item.title} className="rounded-lg border border-slate-200 bg-white p-6">
+                  <h3 className="text-2xl font-black text-brand-blue">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-950 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <SectionHeading
-              light
-              eyebrow="Why Choose Us"
-              title="We focus on promotion that creates real enquiries."
-            />
-            <div className="grid gap-5 md:grid-cols-2">
-              {reasons.map((item) => (
-                <article key={item.title} className="rounded-3xl bg-white p-6 text-slate-900">
-                  <h3 className="text-xl font-black">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
-                </article>
-              ))}
-            </div>
+      <section className="bg-brand-navy py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
+          <SectionHeading
+            light
+            eyebrow="Leadership Principles"
+            title="Neutral, respectful, and prepared for public responsibility."
+          />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {principles.map((item) => (
+              <div key={item} className="rounded-lg border border-white/10 bg-white/7 p-6">
+                <p className="text-base font-semibold leading-7 text-white/82">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

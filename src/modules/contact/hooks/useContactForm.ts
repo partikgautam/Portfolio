@@ -3,12 +3,11 @@ import type { ContactFormValues } from "../types";
 import { createMailtoLead } from "../services/contactService";
 
 const serviceOptions = [
-  "Business promotion video",
-  "Social media marketing",
-  "Paid ads campaign",
-  "Branding and design",
-  "Website or landing page",
-  "Complete marketing campaign",
+  "Leadership enquiry",
+  "Public service discussion",
+  "Business meeting",
+  "Future planning",
+  "General contact",
 ] as const;
 
 const initialForm: ContactFormValues = {

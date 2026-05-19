@@ -25,61 +25,61 @@ export type ServicePackage = {
 /*
   NON-CODER EDIT:
   Add, remove, or rename services here.
-  Each service automatically appears on the Services page.
+  Each item automatically appears on the Future Plan page.
 */
 export const services: Service[] = [
   {
-    id: "social-media",
-    eyebrow: "Content",
-    title: "Social Media Marketing",
+    id: "public-service",
+    eyebrow: "Service",
+    title: "Public Service Foundation",
     summary:
-      "Page management, post design, captions, reels, content calendar, and audience engagement.",
-    features: ["Monthly content planning", "Facebook and Instagram growth", "Brand-consistent designs"],
+      "Build trust by staying connected with people, listening to local needs, and supporting meaningful social work.",
+    features: ["Community listening", "Youth support", "Local development priorities"],
     accent: "blue",
   },
   {
-    id: "promo-videos",
-    eyebrow: "Video",
-    title: "Business Promotion Videos",
+    id: "youth-leadership",
+    eyebrow: "Youth",
+    title: "Youth Leadership",
     summary:
-      "Short videos that introduce your company, explain your services, and help customers trust your business.",
-    features: ["Reels and shorts", "Business intro videos", "Product and service videos"],
+      "Encourage young people toward discipline, education, employment, and responsible civic participation.",
+    features: ["Mentorship mindset", "Skill direction", "Positive public involvement"],
     accent: "orange",
   },
   {
-    id: "paid-ads",
-    eyebrow: "Ads",
-    title: "Paid Advertising",
+    id: "business-growth",
+    eyebrow: "Business",
+    title: "Business Growth",
     summary:
-      "Targeted campaigns that drive calls, messages, traffic, and leads for your business.",
-    features: ["Facebook and Instagram ads", "YouTube promotion", "Lead and message campaigns"],
+      "Create a practical business identity that values trust, planning, and long-term economic contribution.",
+    features: ["Trust-based relationships", "Future ventures", "Local economic thinking"],
     accent: "yellow",
   },
   {
-    id: "branding",
-    eyebrow: "Brand",
-    title: "Branding and Design",
+    id: "education",
+    eyebrow: "Education",
+    title: "Education and Skills",
     summary:
-      "Logo direction, colors, business profile designs, offer creatives, and visual identity for your pages.",
-    features: ["Visual identity", "Poster and campaign design", "Business profile creatives"],
+      "Keep education, practical skills, and confidence-building as central themes in future public work.",
+    features: ["Skill programs", "Career awareness", "Learning culture"],
     accent: "blue",
   },
   {
-    id: "landing-pages",
-    eyebrow: "Website",
-    title: "Landing Pages",
+    id: "community-development",
+    eyebrow: "Community",
+    title: "Community Development",
     summary:
-      "Simple pages that present your service, build trust, and guide customers to call or message.",
-    features: ["Mobile-friendly pages", "WhatsApp and call buttons", "Service and offer sections"],
+      "Focus future planning on basic needs, shared progress, and respectful communication with residents.",
+    features: ["Local issues", "Public coordination", "Visible accountability"],
     accent: "orange",
   },
   {
-    id: "strategy",
-    eyebrow: "Plan",
-    title: "Marketing Strategy",
+    id: "public-identity",
+    eyebrow: "Profile",
+    title: "Public Identity",
     summary:
-      "Practical campaign planning for business owners who need clarity before spending on marketing.",
-    features: ["Audience and offer planning", "Campaign roadmap", "Content and ad direction"],
+      "Maintain a dignified image that can grow into political, social, or business leadership without losing grace.",
+    features: ["Formal profile", "Clear values", "Prepared public presence"],
     accent: "yellow",
   },
 ];
@@ -87,23 +87,23 @@ export const services: Service[] = [
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Understand your business",
-    text: "We learn about your service, customers, offer, location, and growth goals.",
+    title: "Build credibility",
+    text: "Start with a simple, respectful public profile that explains values clearly.",
   },
   {
     step: "02",
-    title: "Plan your campaign",
-    text: "We choose the right videos, posts, ads, and message for your market.",
+    title: "Serve consistently",
+    text: "Add real community work, meetings, and achievements as the journey grows.",
   },
   {
     step: "03",
-    title: "Create the content",
-    text: "We produce visuals that make your business look active and professional.",
+    title: "Grow business direction",
+    text: "Present business interests with trust, practical planning, and local relevance.",
   },
   {
     step: "04",
-    title: "Launch and improve",
-    text: "We publish, promote, track, and improve the campaign based on results.",
+    title: "Prepare for leadership",
+    text: "Use the website as a future base for public plans, events, and leadership updates.",
   },
 ];
 
@@ -113,19 +113,19 @@ export const processSteps: ProcessStep[] = [
 */
 export const packages: ServicePackage[] = [
   {
-    name: "Starter",
-    description: "For new businesses that need a basic online presence.",
-    price: "Custom",
+    name: "Present",
+    description: "A clean profile for current identity and values.",
+    price: "Now",
   },
   {
-    name: "Growth",
-    description: "For businesses that need content plus promotion.",
-    price: "Custom",
+    name: "Prepare",
+    description: "A space for future service, planning, and public work.",
+    price: "Next",
     featured: true,
   },
   {
-    name: "Campaign",
-    description: "For launches, events, seasonal sales, and paid ads.",
-    price: "Custom",
+    name: "Lead",
+    description: "A stronger public platform as responsibilities grow.",
+    price: "Future",
   },
 ];

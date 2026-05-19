@@ -32,7 +32,7 @@ export default function Navbar() {
             className="rounded-full border border-blue-200 px-5 py-3 text-sm font-black text-brand-blue transition hover:border-brand-orange hover:text-brand-orange"
             href={siteConfig.phoneHref}
           >
-            Call Now
+            Call
           </a>
           <a
             className="rounded-full bg-brand-orange px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:bg-orange-600"
@@ -40,7 +40,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp
+            Connect
           </a>
         </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
               className="rounded-full border border-blue-200 px-5 py-3 text-center font-black text-brand-blue"
               onClick={mobileMenu.close}
             >
-              Contact Form
+              Contact
             </Link>
             <a
               className="rounded-full bg-brand-orange px-5 py-3 text-center font-black text-white"
@@ -84,7 +84,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chat on WhatsApp
+              WhatsApp
             </a>
           </div>
         </div>
