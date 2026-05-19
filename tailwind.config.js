@@ -8,15 +8,15 @@ export default {
       },
       colors: {
         brand: {
-          blue: "#0f43a2",
-          navy: "#071b3a",
-          orange: "#f97316",
-          yellow: "#facc15",
-          sky: "#eef6ff",
+          blue: "#1e3a5f",
+          navy: "#0b1628",
+          orange: "#9f7a2d",
+          yellow: "#c8a95a",
+          sky: "#f6f1e8",
         },
       },
       boxShadow: {
-        soft: "0 24px 80px rgba(15, 67, 162, 0.16)",
+        soft: "0 28px 90px rgba(11, 22, 40, 0.18)",
       },
     },
   },

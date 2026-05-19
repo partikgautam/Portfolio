@@ -2,13 +2,15 @@ import { siteConfig } from "../../../config/site";
 import type { ContactFormValues } from "../types";
 
 export function createMailtoLead(formData: ContactFormValues) {
-  const subject = encodeURIComponent(`New marketing enquiry from ${formData.businessName || formData.name}`);
+  const subject = encodeURIComponent(`New message for Partik Gautam from ${formData.name}`);
   const body = encodeURIComponent(
     [
+      "New website contact message for Partik Gautam",
+      "",
       `Name: ${formData.name}`,
       `Phone: ${formData.phone}`,
-      `Business Name: ${formData.businessName}`,
-      `Service Needed: ${formData.service}`,
+      `Organization / Address: ${formData.businessName}`,
+      `Purpose: ${formData.service}`,
       "",
       "Message:",
       formData.message,

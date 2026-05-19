@@ -20,7 +20,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className={`mt-4 text-4xl font-black tracking-tight sm:text-5xl ${light ? "text-white" : "text-slate-950"}`}>
+      <h2 className={`mt-4 text-4xl font-black sm:text-5xl ${light ? "text-white" : "text-slate-950"}`}>
         {title}
       </h2>
       {description && (

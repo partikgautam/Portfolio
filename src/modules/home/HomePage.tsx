@@ -24,41 +24,56 @@ const profileStats = [
   ["Language", "English + Nepali"],
 ];
 
+const focusItems = [
+  "Leadership",
+  "Public Service",
+  "Business Vision",
+  "Future Planning",
+  "Community Trust",
+];
+
+const accessItems = [
+  ["01", "Public Profile", "Leadership identity"],
+  ["02", "Service Focus", "Community trust"],
+  ["03", "Future Plan", "Prepared platform"],
+];
+
 export default function HomePage() {
   return (
     <main>
-      <section className="overflow-hidden bg-stone-50">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8 lg:py-20">
-          <div>
+      <section className="hero-grid overflow-hidden bg-brand-navy text-white">
+        <div className="responsive-hero-inner mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,0.9fr)] md:items-center lg:min-h-[calc(100svh-82px)] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-12 lg:px-8">
+          <div className="hero-copy relative z-10">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">
               Personal Leadership Profile
             </p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-black leading-[1.02] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.98] text-white min-[390px]:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
               Partik Gautam
             </h1>
-            <p className="mt-5 text-2xl font-semibold text-brand-blue">
+            <div className="gold-rule mt-5 h-px max-w-md" />
+            <p className="mt-5 text-xl font-semibold text-brand-yellow sm:text-2xl">
               Hard work. Play hard. Lead with grace.
             </p>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/78 sm:text-lg sm:leading-8">
               A calm and traditional personal brand built for future leadership,
               public service, and business planning. The focus is neutral,
               disciplined, and rooted in respect.
             </p>
-            <p className="mt-3 max-w-2xl text-base font-semibold leading-7 text-slate-600">
+            <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-white/70 sm:text-base sm:leading-7">
               मेहनत, अनुशासन र सेवाको भावनाबाट अगाडि बढ्ने नेतृत्व यात्रा।
             </p>
             <CtaButtons secondaryTo="/about" secondaryLabel="View Profile" />
 
-            <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+            <div className="profile-stats-grid mt-8 grid max-w-xl gap-2 sm:gap-3">
               {profileStats.map(([label, value]) => (
                 <div
                   key={label}
-                  className="rounded-lg border border-slate-200 bg-white p-4"
+                  className="profile-stat-card rounded-lg border border-white/15 bg-white/10 p-3 backdrop-blur sm:p-4"
                 >
-                  <strong className="block text-xl font-black text-slate-950">
+                  <strong className="block text-base font-black leading-tight text-white sm:text-xl">
                     {value}
                   </strong>
-                  <span className="mt-1 block text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <span className="mt-1 block text-[0.66rem] font-bold uppercase tracking-wide text-white/50 sm:text-xs">
                     {label}
                   </span>
                 </div>
@@ -66,40 +81,70 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-lg bg-slate-200 shadow-soft">
+          <div className="hero-visual relative mx-auto w-full max-w-[520px] md:max-w-none">
+            <div className="home-portrait-frame relative overflow-hidden">
+              <div className="absolute inset-x-8 bottom-0 top-12 rounded-full bg-brand-blue/40 blur-3xl" />
               <img
-                className="h-full w-full object-cover object-[50%_12%]"
-                src="./profile/partik-full.jpeg"
+                className="hero-portrait-soft relative z-10 h-full w-full object-contain object-center"
+                src="/profile/optimized/home-clean.jpg"
                 alt="Partik Gautam full formal portrait"
+                loading="eager"
               />
             </div>
-            <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-white/94 p-5 shadow-lg backdrop-blur">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">
-                Neutral Leadership
-              </p>
-              <p className="mt-2 text-lg font-black text-slate-950">
-                सेवा, अनुशासन र दीर्घकालीन सोच।
-              </p>
+            <div className="hero-caption mt-4 rounded-lg border border-white/15 bg-brand-blue/55 p-4 backdrop-blur">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Neutral Leadership</p>
+              <p className="mt-2 text-base font-black text-white">सेवा, अनुशासन र दीर्घकालीन सोच।</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-18">
+      <section className="editorial-ticker border-y border-brand-orange/20 bg-brand-blue py-4 text-white">
+        <div className="editorial-ticker__track text-sm font-black uppercase tracking-[0.26em] text-white/80">
+          {[...focusItems, ...focusItems].map((item, index) => (
+            <span className="editorial-ticker__item" key={`${item}-${index}`}>
+              {item}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-brand-navy px-4 py-5 text-white sm:px-6 lg:px-8">
+        <div className="responsive-card-grid mx-auto grid max-w-7xl gap-3 md:grid-cols-3">
+          {accessItems.map(([number, title, text]) => (
+            <div
+              key={number}
+              className="grid h-full grid-cols-[52px_minmax(0,1fr)] items-center gap-4 rounded-lg border border-white/15 bg-white/10 px-4 py-4 backdrop-blur"
+            >
+              <span className="text-lg font-black text-brand-yellow">{number}</span>
+              <span>
+                <strong className="block text-sm font-black uppercase tracking-[0.16em] text-white">
+                  {title}
+                </strong>
+                <span className="mt-1 block text-sm text-white/68">{text}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-brand-sky py-16">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start">
             <SectionHeading
               eyebrow="Profile Direction"
               title="A public image that feels steady, respectful, and ready for the future."
               description="This website is designed as a foundation for personal growth: leadership identity today, stronger public planning tomorrow."
             />
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="responsive-card-grid grid gap-4 sm:grid-cols-3">
               {pillars.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-lg border border-slate-200 bg-white p-6"
+                  className="collection-card h-full rounded-lg border border-black/10 p-6 shadow-sm"
                 >
+                  <span className="text-xs font-black uppercase tracking-[0.22em] text-brand-orange">
+                    Official Focus
+                  </span>
                   <h3 className="text-xl font-black text-slate-950">
                     {item.title}
                   </h3>
@@ -113,8 +158,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-navy py-16 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-8">
+      <section className="bg-brand-blue py-16 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center lg:px-8">
           <SectionHeading
             light
             eyebrow="Future Planning"

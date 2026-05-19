@@ -9,17 +9,17 @@ type NavClassArgs = {
 };
 
 const navClass = ({ isActive }: NavClassArgs) =>
-  `page-link transition hover:text-brand-orange ${isActive ? "text-brand-orange" : "text-slate-700"}`;
+  `page-link transition hover:text-brand-yellow ${isActive ? "text-brand-yellow" : "text-white/90"}`;
 
 export default function Navbar() {
   const mobileMenu = useDisclosure(false);
 
   return (
     <>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-white/15 bg-brand-navy px-4 py-3 sm:px-6 lg:px-8">
         <Logo />
 
-        <div className="hidden items-center gap-8 text-sm font-bold lg:flex">
+        <div className="hidden items-center gap-7 text-sm font-bold lg:flex">
           {navLinks.map((item) => (
             <NavLink key={item.href} to={item.href} className={navClass} end={item.href === "/"}>
               {item.label}
@@ -29,13 +29,13 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            className="rounded-full border border-blue-200 px-5 py-3 text-sm font-black text-brand-blue transition hover:border-brand-orange hover:text-brand-orange"
+            className="rounded-full border border-white/20 px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white/85 transition hover:border-brand-yellow hover:text-brand-yellow"
             href={siteConfig.phoneHref}
           >
             Call
           </a>
           <a
-            className="rounded-full bg-brand-orange px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:bg-orange-600"
+            className="rounded-full bg-brand-orange px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-brand-yellow hover:text-brand-navy"
             href={siteConfig.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-900 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white lg:hidden"
           type="button"
           aria-label="Open menu"
           aria-expanded={mobileMenu.isOpen}
@@ -56,14 +56,14 @@ export default function Navbar() {
       </nav>
 
       {mobileMenu.isOpen && (
-        <div className="border-t border-slate-100 bg-white px-4 py-4 lg:hidden">
-          <div className="flex flex-col gap-3 text-sm font-bold text-slate-700">
+        <div className="border-t border-white/15 bg-brand-navy px-4 py-4 lg:hidden">
+          <div className="flex flex-col gap-3 text-sm font-bold text-white/75">
             {navLinks.map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
                 className={({ isActive }) =>
-                  `rounded-xl px-3 py-2 hover:bg-blue-50 ${isActive ? "text-brand-orange" : ""}`
+                  `rounded-lg px-3 py-2 hover:bg-white/10 ${isActive ? "text-brand-yellow" : ""}`
                 }
                 end={item.href === "/"}
                 onClick={mobileMenu.close}
@@ -73,7 +73,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="rounded-full border border-blue-200 px-5 py-3 text-center font-black text-brand-blue"
+              className="rounded-full border border-white/20 px-5 py-3 text-center font-black text-white"
               onClick={mobileMenu.close}
             >
               Contact

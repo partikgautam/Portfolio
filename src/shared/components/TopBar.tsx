@@ -4,7 +4,7 @@ import SocialLinks from "./SocialLinks";
 
 export default function TopBar() {
   return (
-    <div className="bg-brand-navy text-sm text-white">
+    <div className="hidden bg-brand-navy text-sm text-white md:block">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <a className="inline-flex items-center gap-2 hover:text-brand-yellow" href={siteConfig.phoneHref}>

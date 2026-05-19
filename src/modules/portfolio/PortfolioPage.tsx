@@ -17,36 +17,45 @@ const businessPoints = [
   },
 ];
 
+const businessTimeline = [
+  ["Now", "Build trust and present a formal identity."],
+  ["Next", "Add official business work and partnerships."],
+  ["Future", "Show ventures, achievements, and public contribution."],
+];
+
 export default function PortfolioPage() {
   return (
     <main>
-      <section className="bg-stone-50 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+      <section className="hero-grid bg-brand-navy py-14 text-white sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:px-8">
           <div>
             <SectionHeading
+              light
               eyebrow="Business"
               title="A business-minded profile with a formal public tone."
               description="This section presents business as part of Partik Gautam's wider leadership identity: practical, formal, and built on trust."
             />
-            <p className="mt-6 text-base font-semibold leading-7 text-slate-600">
+            <div className="gold-rule mt-6 h-px max-w-md" />
+            <p className="mt-6 text-base font-semibold leading-7 text-white/70">
               व्यवसाय केवल नाफा होइन; विश्वास, योजना र समाजमा योगदान पनि हो।
             </p>
           </div>
-          <div className="overflow-hidden rounded-lg bg-slate-200 shadow-soft">
+          <div className="soft-media-panel">
             <img
-              className="h-[560px] w-full object-cover object-[50%_20%]"
-              src="/profile/partik-full.jpeg"
-              alt="Partik Gautam standing in formal attire"
+              className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
+              src="/profile/generated/business-planning.jpg"
+              alt="Professional business planning desk"
+              loading="eager"
             />
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="bg-brand-sky py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="responsive-card-grid grid gap-6 md:grid-cols-3">
             {businessPoints.map((item) => (
-              <article key={item.title} className="rounded-lg border border-slate-200 bg-white p-7">
+              <article key={item.title} className="collection-card h-full rounded-lg border border-black/10 p-7 shadow-sm">
                 <h3 className="text-2xl font-black text-slate-950">{item.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-slate-600">{item.text}</p>
               </article>
@@ -55,8 +64,30 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="bg-brand-navy py-20 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-8">
+      <section className="bg-white py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:px-8">
+          <SectionHeading
+            eyebrow="Business Roadmap"
+            title="A static, professional space for business growth."
+            description="Clear blocks can later hold real company names, projects, teams, and business milestones."
+          />
+          <div className="responsive-card-grid grid gap-4 md:grid-cols-3">
+            {businessTimeline.map(([time, text]) => (
+              <div key={time} className="h-full rounded-lg border border-black/10 bg-brand-sky p-5">
+                <strong className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">
+                  {time}
+                </strong>
+                <p className="mt-3 text-sm font-semibold leading-6 text-slate-700">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-blue py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center lg:px-8">
           <SectionHeading
             light
             eyebrow="Future Business Direction"

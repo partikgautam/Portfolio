@@ -39,7 +39,7 @@ export default function Footer() {
           <SocialLinks className="mt-5" />
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-5 text-center text-xs font-semibold text-white/55">
+      <div className="border-t border-white/15 px-4 py-5 text-center text-xs font-semibold text-white/55">
         Copyright 2026 Partik Gautam. All rights reserved.
       </div>
     </footer>

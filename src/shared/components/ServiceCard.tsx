@@ -1,9 +1,9 @@
 import type { Service, ServiceAccent } from "../../data/services";
 
 const accentClasses = {
-  blue: "bg-blue-100 text-brand-blue",
-  orange: "bg-orange-100 text-brand-orange",
-  yellow: "bg-yellow-100 text-yellow-700",
+  blue: "bg-brand-navy text-white",
+  orange: "bg-brand-orange text-white",
+  yellow: "bg-brand-yellow text-brand-navy",
 } satisfies Record<ServiceAccent, string>;
 
 type ServiceCardProps = {
@@ -13,12 +13,12 @@ type ServiceCardProps = {
 
 export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
-    <article className="card-hover rounded-lg border border-slate-200 bg-white p-7">
+    <article className="card-hover collection-card h-full rounded-lg border border-black/10 p-7">
       <div className="flex items-center justify-between gap-4">
         <span className={`rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${accentClasses[service.accent]}`}>
           {service.eyebrow}
         </span>
-        <span className="text-sm font-black text-slate-300">{String(index + 1).padStart(2, "0")}</span>
+        <span className="text-sm font-black text-brand-orange">0{index + 1}</span>
       </div>
       <h3 className="mt-6 text-2xl font-black text-slate-950">{service.title}</h3>
       <p className="mt-3 text-sm leading-6 text-slate-600">{service.summary}</p>
