@@ -5,9 +5,9 @@ import ServiceCard from "../../shared/components/ServiceCard";
 export default function ServicesPage() {
   return (
     <main>
-      <section className="hero-grid bg-brand-navy py-14 text-white sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:px-8">
-          <div>
+      <section className="hero-grid inner-hero bg-brand-navy py-14 text-white sm:py-20">
+        <div className="inner-hero-shell mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:px-8">
+          <div className="inner-hero-copy">
             <SectionHeading
               light
               eyebrow="Future Plan"
@@ -18,7 +18,7 @@ export default function ServicesPage() {
               आजको परिचय, भोलिको योजना। This page can later hold real achievements, party role, public events, social projects, and development commitments.
             </p>
           </div>
-          <div className="soft-media-panel">
+          <div className="soft-media-panel inner-media-panel">
             <img
               className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
               src="/profile/generated/future-plan-desk.jpg"
@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-brand-sky py-20">
+      <section className="portfolio-light-section bg-brand-sky py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="responsive-card-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
@@ -49,7 +49,7 @@ export default function ServicesPage() {
             />
             <div className="responsive-card-grid grid gap-4 sm:grid-cols-2">
               {processSteps.map((item) => (
-                <article key={item.step} className="h-full rounded-lg border border-black/10 bg-brand-sky p-6">
+                <article key={item.step} className="portfolio-roadmap-card h-full border border-black/10 bg-brand-sky p-6">
                   <span className="text-sm font-black text-brand-orange">Step {item.step}</span>
                   <h3 className="mt-3 text-xl font-black text-slate-950">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             {packages.map((item) => (
               <article
                 key={item.name}
-                className={`h-full rounded-lg p-6 ${
+                className={`h-full rounded-2xl p-6 ${
                   item.featured ? "bg-brand-orange text-white shadow-xl shadow-blue-950/20" : "border border-white/15 bg-white/10 text-white"
                 }`}
               >

@@ -26,9 +26,9 @@ const principles = [
 export default function AboutPage() {
   return (
     <main>
-      <section className="hero-grid bg-brand-navy py-14 text-white sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-center lg:px-8">
-          <div className="soft-media-panel">
+      <section className="hero-grid inner-hero bg-brand-navy py-14 text-white sm:py-20">
+        <div className="inner-hero-shell mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-center lg:px-8">
+          <div className="soft-media-panel inner-media-panel">
             <img
               className="about-portrait-focus page-media-soft responsive-page-media relative z-10 w-full"
               src="/profile/optimized/partik-service.jpg"
@@ -36,7 +36,7 @@ export default function AboutPage() {
               loading="eager"
             />
           </div>
-          <div>
+          <div className="inner-hero-copy">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">
               About Partik Gautam
             </p>
@@ -62,7 +62,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-brand-sky py-20">
+      <section className="portfolio-light-section bg-brand-sky py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
             <SectionHeading
@@ -70,11 +70,12 @@ export default function AboutPage() {
               title="Formal presence with practical purpose."
             />
             <div className="responsive-card-grid grid gap-4 sm:grid-cols-3">
-              {values.map((item) => (
+              {values.map((item, index) => (
                 <article
                   key={item.title}
-                  className="collection-card h-full rounded-lg border border-black/10 p-6 shadow-sm"
+                  className="portfolio-feature-card collection-card h-full border border-black/10 p-6 shadow-sm"
                 >
+                  <span className="text-5xl font-black text-brand-orange/15">0{index + 1}</span>
                   <h3 className="text-2xl font-black text-brand-blue">
                     {item.title}
                   </h3>
@@ -99,7 +100,7 @@ export default function AboutPage() {
             {principles.map((item) => (
               <div
                 key={item}
-                className="h-full rounded-lg border border-white/15 bg-white/10 p-6 backdrop-blur"
+                className="portfolio-dark-card h-full border border-white/15 bg-white/10 p-6 backdrop-blur"
               >
                 <p className="text-base font-semibold leading-7 text-white/80">
                   {item}

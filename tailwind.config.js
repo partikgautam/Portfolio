@@ -4,19 +4,20 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Roboto", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["Kanit", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         brand: {
-          blue: "#1e3a5f",
-          navy: "#0b1628",
-          orange: "#9f7a2d",
-          yellow: "#c8a95a",
-          sky: "#f6f1e8",
+          blue: "#212428",
+          navy: "#0d1013",
+          orange: "#d8b45a",
+          yellow: "#f3d37a",
+          sky: "#f9f9f9",
         },
       },
       boxShadow: {
-        soft: "0 28px 90px rgba(11, 22, 40, 0.18)",
+        soft: "0 28px 90px rgba(13, 16, 19, 0.28)",
       },
     },
   },

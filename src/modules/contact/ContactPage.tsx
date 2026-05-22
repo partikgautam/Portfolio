@@ -8,9 +8,9 @@ export default function ContactPage() {
 
   return (
     <main>
-      <section className="hero-grid bg-brand-navy py-14 text-white sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-center lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-8">
-          <div>
+      <section className="hero-grid inner-hero bg-brand-navy py-14 text-white sm:py-20">
+        <div className="inner-hero-shell mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-center lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-8">
+          <div className="inner-hero-copy">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">Contact</p>
             <h1 className="mt-4 text-5xl font-black text-white sm:text-6xl">
               Connect for leadership, service, or business discussion.
@@ -24,7 +24,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                className="rounded-full bg-brand-orange px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-orange-500/25 hover:bg-orange-600"
+                className="rounded-2xl bg-brand-orange px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 hover:bg-white hover:text-brand-navy"
                 href={siteConfig.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function ContactPage() {
                 WhatsApp
               </a>
               <a
-                className="rounded-full bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-navy ring-1 ring-white/30 hover:text-brand-orange"
+                className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-navy ring-1 ring-white/30 hover:bg-brand-orange hover:text-white"
                 href={siteConfig.phoneHref}
               >
                 Call Now
@@ -40,10 +40,10 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="responsive-card-grid grid gap-4">
+          <div className="responsive-card-grid contact-info-stack grid gap-4">
             <ContactInfo label="Phone" value={siteConfig.phoneDisplay} href={siteConfig.phoneHref} />
             <ContactInfo label="Email" value={siteConfig.email} href={`mailto:${siteConfig.email}`} />
-            <div className="h-full rounded-lg border border-white/15 bg-white/10 p-6 shadow-sm">
+            <div className="portfolio-dark-card h-full border border-white/15 bg-white/10 p-6 shadow-sm">
               <span className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Address</span>
               <p className="mt-2 text-2xl font-black text-white">{siteConfig.location}, Nepal</p>
             </div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-brand-sky py-16 sm:py-20">
+      <section className="portfolio-light-section bg-brand-sky py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[minmax(280px,0.86fr)_minmax(0,1.14fr)] md:items-start lg:gap-12 lg:px-8">
           <div>
             <SectionHeading
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form className="mt-0 grid gap-4 self-start rounded-lg border border-black/10 bg-white p-5 shadow-sm md:p-6" onSubmit={handleSubmit}>
+          <form className="portfolio-form-card mt-0 grid gap-4 self-start border border-black/10 bg-white p-5 shadow-sm md:p-6" onSubmit={handleSubmit}>
             <div className="grid gap-4 sm:grid-cols-2">
               <TextField label="Your Name" name="name" value={formData.name} onChange={updateField} required />
               <TextField label="Phone Number" name="phone" type="tel" value={formData.phone} onChange={updateField} required />
@@ -78,7 +78,7 @@ export default function ContactPage() {
             <label className="grid gap-2 text-sm font-bold text-slate-700">
               Purpose
               <select
-                className="rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+                className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/20"
                 name="service"
                 value={formData.service}
                 onChange={updateField}
@@ -91,7 +91,7 @@ export default function ContactPage() {
             <label className="grid gap-2 text-sm font-bold text-slate-700">
               Message
               <textarea
-                className="min-h-28 rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+                className="min-h-28 rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/20"
                 name="message"
                 value={formData.message}
                 onChange={updateField}
@@ -99,7 +99,7 @@ export default function ContactPage() {
               />
             </label>
             <button
-              className="rounded-full bg-brand-orange px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-orange-500/25 transition hover:bg-orange-600"
+              className="rounded-2xl bg-brand-orange px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-brand-navy"
               type="submit"
             >
               Send Message
@@ -119,7 +119,7 @@ type ContactInfoProps = {
 
 function ContactInfo({ label, value, href }: ContactInfoProps) {
   return (
-    <div className="h-full rounded-lg border border-white/15 bg-white/10 p-6 shadow-sm">
+    <div className="portfolio-dark-card h-full border border-white/15 bg-white/10 p-6 shadow-sm">
       <span className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">{label}</span>
       <a className="mt-2 block break-all text-2xl font-black text-white hover:text-brand-yellow" href={href}>
         {value}
@@ -142,7 +142,7 @@ function TextField({ label, name, type = "text", value, onChange, required = fal
     <label className="grid gap-2 text-sm font-bold text-slate-700">
       {label}
       <input
-        className="rounded-lg border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-orange-100"
+        className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/20"
         name={name}
         type={type}
         value={value}

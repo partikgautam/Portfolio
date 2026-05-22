@@ -41,13 +41,18 @@ const accessItems = [
 export default function HomePage() {
   return (
     <main>
-      <section className="hero-grid overflow-hidden bg-brand-navy text-white">
-        <div className="responsive-hero-inner mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,0.9fr)] md:items-center lg:min-h-[calc(100svh-82px)] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-12 lg:px-8">
+      <section className="hero-grid portfolio-hero overflow-hidden bg-brand-navy text-white">
+        <div className="responsive-hero-inner portfolio-hero-shell mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:min-h-[calc(100svh-82px)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-10 lg:px-8">
+          <div className="hero-side-rail hidden lg:flex">
+            <span>Profile</span>
+            <span>Leadership</span>
+          </div>
+
           <div className="hero-copy relative z-10">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-orange">
               Personal Leadership Profile
             </p>
-            <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.98] text-white min-[390px]:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="hero-display mt-4 max-w-4xl text-5xl font-black leading-[0.88] text-white min-[390px]:text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
               Partik Gautam
             </h1>
             <div className="gold-rule mt-5 h-px max-w-md" />
@@ -64,11 +69,11 @@ export default function HomePage() {
             </p>
             <CtaButtons secondaryTo="/about" secondaryLabel="View Profile" />
 
-            <div className="profile-stats-grid mt-8 grid max-w-xl gap-2 sm:gap-3">
+            <div className="profile-stats-grid portfolio-stat-grid mt-8 grid max-w-2xl gap-2 sm:gap-3">
               {profileStats.map(([label, value]) => (
                 <div
                   key={label}
-                  className="profile-stat-card rounded-lg border border-white/15 bg-white/10 p-3 backdrop-blur sm:p-4"
+                  className="profile-stat-card portfolio-stat-card border border-white/15 bg-white/10 p-3 backdrop-blur sm:p-4"
                 >
                   <strong className="block text-base font-black leading-tight text-white sm:text-xl">
                     {value}
@@ -81,17 +86,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-visual relative mx-auto w-full max-w-[520px] md:max-w-none">
+          <div className="hero-visual portfolio-portrait-stage relative mx-auto w-full max-w-[560px] md:max-w-none">
             <div className="home-portrait-frame relative overflow-hidden">
               <div className="absolute inset-x-8 bottom-0 top-12 rounded-full bg-brand-blue/40 blur-3xl" />
               <img
-                className="hero-portrait-soft relative z-10 h-full w-full object-contain object-center"
+                className="relative z-10 h-full w-full object-cover object-center"
                 src="/profile/optimized/home-clean.jpg"
                 alt="Partik Gautam full formal portrait"
                 loading="eager"
               />
             </div>
-            <div className="hero-caption mt-4 rounded-lg border border-white/15 bg-brand-blue/55 p-4 backdrop-blur">
+            <div className="hero-caption portfolio-floating-caption border border-white/15 bg-brand-blue/75 p-4 backdrop-blur">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Neutral Leadership</p>
               <p className="mt-2 text-base font-black text-white">सेवा, अनुशासन र दीर्घकालीन सोच।</p>
             </div>
@@ -114,7 +119,7 @@ export default function HomePage() {
           {accessItems.map(([number, title, text]) => (
             <div
               key={number}
-              className="grid h-full grid-cols-[52px_minmax(0,1fr)] items-center gap-4 rounded-lg border border-white/15 bg-white/10 px-4 py-4 backdrop-blur"
+              className="portfolio-access-card grid h-full grid-cols-[52px_minmax(0,1fr)] items-center gap-4 border border-white/15 bg-white/10 px-4 py-4 backdrop-blur"
             >
               <span className="text-lg font-black text-brand-yellow">{number}</span>
               <span>
@@ -128,20 +133,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-sky py-16">
+      <section className="portfolio-light-section bg-brand-sky py-16">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
             <SectionHeading
               eyebrow="Profile Direction"
               title="A public image that feels steady, respectful, and ready for the future."
               description="This website is designed as a foundation for personal growth: leadership identity today, stronger public planning tomorrow."
             />
             <div className="responsive-card-grid grid gap-4 sm:grid-cols-3">
-              {pillars.map((item) => (
+              {pillars.map((item, index) => (
                 <article
                   key={item.title}
-                  className="collection-card h-full rounded-lg border border-black/10 p-6 shadow-sm"
+                  className="portfolio-feature-card collection-card h-full border border-black/10 p-6 shadow-sm"
                 >
+                  <span className="text-5xl font-black text-brand-orange/15">0{index + 1}</span>
                   <span className="text-xs font-black uppercase tracking-[0.22em] text-brand-orange">
                     Official Focus
                   </span>
@@ -168,13 +174,13 @@ export default function HomePage() {
           />
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Link
-              className="rounded-full bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:text-brand-orange"
+              className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:bg-brand-orange hover:text-white"
               to="/future-plan"
             >
               See Future Plan
             </Link>
             <a
-              className="rounded-full border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-yellow hover:text-brand-yellow"
+              className="rounded-2xl border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-orange hover:text-brand-orange"
               href={siteConfig.phoneHref}
             >
               Call Partik

@@ -9,14 +9,14 @@ type NavClassArgs = {
 };
 
 const navClass = ({ isActive }: NavClassArgs) =>
-  `page-link transition hover:text-brand-yellow ${isActive ? "text-brand-yellow" : "text-white/90"}`;
+  `page-link uppercase tracking-wide transition hover:text-brand-orange ${isActive ? "text-brand-orange" : "text-white/80"}`;
 
 export default function Navbar() {
   const mobileMenu = useDisclosure(false);
 
   return (
     <>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-white/15 bg-brand-navy px-4 py-3 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-brand-navy/92 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur sm:px-6 lg:px-8">
         <Logo />
 
         <div className="hidden items-center gap-7 text-sm font-bold lg:flex">
@@ -29,13 +29,13 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            className="rounded-full border border-white/20 px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white/85 transition hover:border-brand-yellow hover:text-brand-yellow"
+            className="rounded-2xl border border-white/20 px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white/85 transition hover:border-brand-orange hover:text-brand-orange"
             href={siteConfig.phoneHref}
           >
             Call
           </a>
           <a
-            className="rounded-full bg-brand-orange px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-brand-yellow hover:text-brand-navy"
+            className="rounded-2xl bg-brand-orange px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-white hover:text-brand-navy"
             href={siteConfig.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/15 text-white lg:hidden"
           type="button"
           aria-label="Open menu"
           aria-expanded={mobileMenu.isOpen}
@@ -56,14 +56,14 @@ export default function Navbar() {
       </nav>
 
       {mobileMenu.isOpen && (
-        <div className="border-t border-white/15 bg-brand-navy px-4 py-4 lg:hidden">
+        <div className="mx-auto mt-2 max-w-7xl rounded-3xl border border-white/10 bg-brand-navy/95 px-4 py-4 shadow-xl shadow-black/20 backdrop-blur lg:hidden">
           <div className="flex flex-col gap-3 text-sm font-bold text-white/75">
             {navLinks.map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
                 className={({ isActive }) =>
-                  `rounded-lg px-3 py-2 hover:bg-white/10 ${isActive ? "text-brand-yellow" : ""}`
+                  `rounded-2xl px-3 py-2 uppercase tracking-wide hover:bg-white/10 ${isActive ? "text-brand-orange" : ""}`
                 }
                 end={item.href === "/"}
                 onClick={mobileMenu.close}
@@ -73,13 +73,13 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="rounded-full border border-white/20 px-5 py-3 text-center font-black text-white"
+              className="rounded-2xl border border-white/20 px-5 py-3 text-center font-black text-white"
               onClick={mobileMenu.close}
             >
               Contact
             </Link>
             <a
-              className="rounded-full bg-brand-orange px-5 py-3 text-center font-black text-white"
+              className="rounded-2xl bg-brand-orange px-5 py-3 text-center font-black text-white"
               href={siteConfig.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"

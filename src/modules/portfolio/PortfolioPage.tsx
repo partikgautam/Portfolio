@@ -26,9 +26,9 @@ const businessTimeline = [
 export default function PortfolioPage() {
   return (
     <main>
-      <section className="hero-grid bg-brand-navy py-14 text-white sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:px-8">
-          <div>
+      <section className="hero-grid inner-hero bg-brand-navy py-14 text-white sm:py-20">
+        <div className="inner-hero-shell mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:px-8">
+          <div className="inner-hero-copy">
             <SectionHeading
               light
               eyebrow="Business"
@@ -40,7 +40,7 @@ export default function PortfolioPage() {
               व्यवसाय केवल नाफा होइन; विश्वास, योजना र समाजमा योगदान पनि हो।
             </p>
           </div>
-          <div className="soft-media-panel">
+          <div className="soft-media-panel inner-media-panel">
             <img
               className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
               src="/profile/generated/business-planning.jpg"
@@ -51,11 +51,12 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="bg-brand-sky py-20">
+      <section className="portfolio-light-section bg-brand-sky py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="responsive-card-grid grid gap-6 md:grid-cols-3">
-            {businessPoints.map((item) => (
-              <article key={item.title} className="collection-card h-full rounded-lg border border-black/10 p-7 shadow-sm">
+            {businessPoints.map((item, index) => (
+              <article key={item.title} className="portfolio-feature-card collection-card h-full border border-black/10 p-7 shadow-sm">
+                <span className="text-5xl font-black text-brand-orange/15">0{index + 1}</span>
                 <h3 className="text-2xl font-black text-slate-950">{item.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-slate-600">{item.text}</p>
               </article>
@@ -73,7 +74,7 @@ export default function PortfolioPage() {
           />
           <div className="responsive-card-grid grid gap-4 md:grid-cols-3">
             {businessTimeline.map(([time, text]) => (
-              <div key={time} className="h-full rounded-lg border border-black/10 bg-brand-sky p-5">
+              <div key={time} className="portfolio-roadmap-card h-full border border-black/10 bg-brand-sky p-5">
                 <strong className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">
                   {time}
                 </strong>
@@ -96,13 +97,13 @@ export default function PortfolioPage() {
           />
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <a
-              className="rounded-full bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:text-brand-orange"
+              className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:bg-brand-orange hover:text-white"
               href={siteConfig.phoneHref}
             >
               Call
             </a>
             <Link
-              className="rounded-full border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-yellow hover:text-brand-yellow"
+              className="rounded-2xl border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-orange hover:text-brand-orange"
               to="/contact"
             >
               Contact
