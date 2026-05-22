@@ -69,6 +69,13 @@ export default function HomePage() {
             </p>
             <CtaButtons secondaryTo="/about" secondaryLabel="View Profile" />
 
+            <div className="framer-command-bar mt-6">
+              <span>Leadership System</span>
+              <strong>Neutral</strong>
+              <strong>Formal</strong>
+              <strong>Service</strong>
+            </div>
+
             <div className="profile-stats-grid portfolio-stat-grid mt-8 grid max-w-2xl gap-2 sm:gap-3">
               {profileStats.map(([label, value]) => (
                 <div
@@ -87,14 +94,28 @@ export default function HomePage() {
           </div>
 
           <div className="hero-visual portfolio-portrait-stage relative mx-auto w-full max-w-[560px] md:max-w-none">
-            <div className="home-portrait-frame relative overflow-hidden">
+            <div className="hero-depth-orbit" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="home-portrait-frame premium-portrait-card relative overflow-hidden">
               <div className="absolute inset-x-8 bottom-0 top-12 rounded-full bg-brand-blue/40 blur-3xl" />
+              <div className="portrait-light-sweep" aria-hidden="true" />
               <img
                 className="relative z-10 h-full w-full object-cover object-center"
                 src="/profile/optimized/home-clean.jpg"
                 alt="Partik Gautam full formal portrait"
                 loading="eager"
               />
+            </div>
+            <div className="hero-floating-card hero-floating-card--top" aria-hidden="true">
+              <span>01</span>
+              <strong>Service First</strong>
+            </div>
+            <div className="hero-floating-card hero-floating-card--bottom" aria-hidden="true">
+              <span>2030</span>
+              <strong>Future Ready</strong>
             </div>
             <div className="hero-caption portfolio-floating-caption border border-white/15 bg-brand-blue/75 p-4 backdrop-blur">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-orange">Neutral Leadership</p>
@@ -174,13 +195,13 @@ export default function HomePage() {
           />
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Link
-              className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:bg-brand-orange hover:text-white"
+              className="premium-action premium-action--primary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
               to="/future-plan"
             >
               See Future Plan
             </Link>
             <a
-              className="rounded-2xl border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-orange hover:text-brand-orange"
+              className="premium-action premium-action--secondary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
               href={siteConfig.phoneHref}
             >
               Call Partik

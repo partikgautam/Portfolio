@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-brand-navy/92 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur sm:px-6 lg:px-8">
+      <nav className="site-glass-nav mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur sm:px-6 lg:px-8">
         <Logo />
 
         <div className="hidden items-center gap-7 text-sm font-bold lg:flex">
@@ -35,7 +35,7 @@ export default function Navbar() {
             Call
           </a>
           <a
-            className="rounded-2xl bg-brand-orange px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-white hover:text-brand-navy"
+            className="premium-action premium-action--primary rounded-2xl px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition"
             href={siteConfig.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"

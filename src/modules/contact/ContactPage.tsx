@@ -24,7 +24,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                className="rounded-2xl bg-brand-orange px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 hover:bg-white hover:text-brand-navy"
+                className="premium-action premium-action--primary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
                 href={siteConfig.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function ContactPage() {
                 WhatsApp
               </a>
               <a
-                className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-navy ring-1 ring-white/30 hover:bg-brand-orange hover:text-white"
+                className="premium-action premium-action--secondary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
                 href={siteConfig.phoneHref}
               >
                 Call Now
@@ -40,7 +40,11 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="responsive-card-grid contact-info-stack grid gap-4">
+          <div className="responsive-card-grid contact-info-stack contact-hero-panel grid gap-4">
+            <div className="inner-depth-orbit contact-depth-orbit" aria-hidden="true">
+              <span />
+              <span />
+            </div>
             <ContactInfo label="Phone" value={siteConfig.phoneDisplay} href={siteConfig.phoneHref} />
             <ContactInfo label="Email" value={siteConfig.email} href={`mailto:${siteConfig.email}`} />
             <div className="portfolio-dark-card h-full border border-white/15 bg-white/10 p-6 shadow-sm">
@@ -59,7 +63,11 @@ export default function ContactPage() {
               title="Send a formal message."
               description="Submitting prepares an email addressed to Partik with the message details."
             />
-            <div className="soft-media-panel soft-media-panel--light mt-6">
+            <div className="soft-media-panel soft-media-panel--light premium-inner-media mt-6">
+              <div className="inner-floating-note inner-floating-note--right" aria-hidden="true">
+                <span>Contact</span>
+                <strong>Formal Message</strong>
+              </div>
               <img
                 className="page-media-soft responsive-contact-media relative z-10 w-full object-cover object-center"
                 src="/profile/generated/contact-desk.jpg"
@@ -99,7 +107,7 @@ export default function ContactPage() {
               />
             </label>
             <button
-              className="rounded-2xl bg-brand-orange px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition hover:bg-brand-navy"
+              className="premium-action premium-action--primary rounded-2xl px-7 py-4 text-sm font-black uppercase tracking-wide transition"
               type="submit"
             >
               Send Message

@@ -18,7 +18,15 @@ export default function ServicesPage() {
               आजको परिचय, भोलिको योजना। This page can later hold real achievements, party role, public events, social projects, and development commitments.
             </p>
           </div>
-          <div className="soft-media-panel inner-media-panel">
+          <div className="soft-media-panel inner-media-panel premium-inner-media">
+            <div className="inner-depth-orbit" aria-hidden="true">
+              <span />
+              <span />
+            </div>
+            <div className="inner-floating-note inner-floating-note--right" aria-hidden="true">
+              <span>Future</span>
+              <strong>Prepared Platform</strong>
+            </div>
             <img
               className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
               src="/profile/generated/future-plan-desk.jpg"
@@ -72,8 +80,8 @@ export default function ServicesPage() {
             {packages.map((item) => (
               <article
                 key={item.name}
-                className={`h-full rounded-2xl p-6 ${
-                  item.featured ? "bg-brand-orange text-white shadow-xl shadow-blue-950/20" : "border border-white/15 bg-white/10 text-white"
+                className={`portfolio-depth-card h-full rounded-2xl p-6 ${
+                  item.featured ? "premium-plan-card text-brand-navy shadow-xl shadow-blue-950/20" : "border border-white/15 bg-white/10 text-white"
                 }`}
               >
                 <h3 className="text-xl font-black">{item.name}</h3>

@@ -28,7 +28,15 @@ export default function AboutPage() {
     <main>
       <section className="hero-grid inner-hero bg-brand-navy py-14 text-white sm:py-20">
         <div className="inner-hero-shell mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-center lg:px-8">
-          <div className="soft-media-panel inner-media-panel">
+          <div className="soft-media-panel inner-media-panel premium-inner-media">
+            <div className="inner-depth-orbit" aria-hidden="true">
+              <span />
+              <span />
+            </div>
+            <div className="inner-floating-note inner-floating-note--left" aria-hidden="true">
+              <span>Grace</span>
+              <strong>Formal Presence</strong>
+            </div>
             <img
               className="about-portrait-focus page-media-soft responsive-page-media relative z-10 w-full"
               src="/profile/optimized/partik-service.jpg"

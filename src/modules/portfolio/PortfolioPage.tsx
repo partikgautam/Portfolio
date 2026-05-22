@@ -40,7 +40,15 @@ export default function PortfolioPage() {
               व्यवसाय केवल नाफा होइन; विश्वास, योजना र समाजमा योगदान पनि हो।
             </p>
           </div>
-          <div className="soft-media-panel inner-media-panel">
+          <div className="soft-media-panel inner-media-panel premium-inner-media">
+            <div className="inner-depth-orbit" aria-hidden="true">
+              <span />
+              <span />
+            </div>
+            <div className="inner-floating-note inner-floating-note--right" aria-hidden="true">
+              <span>Business</span>
+              <strong>Trust First</strong>
+            </div>
             <img
               className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
               src="/profile/generated/business-planning.jpg"
@@ -97,13 +105,13 @@ export default function PortfolioPage() {
           />
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <a
-              className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-brand-blue hover:bg-brand-orange hover:text-white"
+              className="premium-action premium-action--primary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
               href={siteConfig.phoneHref}
             >
               Call
             </a>
             <Link
-              className="rounded-2xl border border-white/25 px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-white hover:border-brand-orange hover:text-brand-orange"
+              className="premium-action premium-action--secondary rounded-2xl px-7 py-4 text-center text-sm font-black uppercase tracking-wide"
               to="/contact"
             >
               Contact

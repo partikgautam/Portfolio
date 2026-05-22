@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 export default function TopBar() {
   return (
     <div className="hidden text-sm text-white md:block">
-      <div className="mx-auto mb-2 flex max-w-7xl flex-col gap-3 rounded-3xl border border-white/10 bg-brand-blue/70 px-5 py-3 shadow-sm shadow-black/20 backdrop-blur sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <div className="site-glass-nav mx-auto mb-2 flex max-w-7xl flex-col gap-3 rounded-3xl border border-white/10 px-5 py-3 shadow-sm shadow-black/20 backdrop-blur sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <a className="inline-flex items-center gap-2 hover:text-brand-yellow" href={siteConfig.phoneHref}>
             <PhoneIcon className="h-4 w-4" />
