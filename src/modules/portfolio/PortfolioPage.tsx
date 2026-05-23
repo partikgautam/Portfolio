@@ -50,9 +50,9 @@ export default function PortfolioPage() {
               <strong>Trust First</strong>
             </div>
             <img
-              className="page-media-soft responsive-page-media relative z-10 w-full object-cover object-center"
-              src="/profile/generated/business-planning.jpg"
-              alt="Professional business planning desk"
+              className="business-portrait-focus page-media-soft responsive-page-media relative z-10 w-full object-cover"
+              src="/profile/optimized/business-alt-professional.jpg"
+              alt="Formal business portrait of Partik Gautam"
               loading="eager"
             />
           </div>

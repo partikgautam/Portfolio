@@ -16,10 +16,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="site-glass-nav mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur sm:px-6 lg:px-8">
+      <nav className="site-shell-width site-glass-nav mx-auto flex items-center justify-between rounded-[2rem] border border-white/10 px-5 py-4 shadow-xl shadow-black/20 backdrop-blur sm:px-7 lg:px-9 lg:py-5">
         <Logo />
 
-        <div className="hidden items-center gap-7 text-sm font-bold lg:flex">
+        <div className="hidden items-center gap-8 text-[0.95rem] font-bold lg:flex">
           {navLinks.map((item) => (
             <NavLink key={item.href} to={item.href} className={navClass} end={item.href === "/"}>
               {item.label}
@@ -29,13 +29,13 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            className="rounded-2xl border border-white/20 px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white/85 transition hover:border-brand-orange hover:text-brand-orange"
+            className="rounded-2xl border border-white/20 px-5 py-3 text-sm font-black uppercase tracking-wide text-white/85 transition hover:border-brand-orange hover:text-brand-orange"
             href={siteConfig.phoneHref}
           >
             Call
           </a>
           <a
-            className="premium-action premium-action--primary rounded-2xl px-4 py-2.5 text-xs font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition"
+            className="premium-action premium-action--primary rounded-2xl px-5 py-3 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-950/20 transition"
             href={siteConfig.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/15 text-white lg:hidden"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 text-white lg:hidden"
           type="button"
           aria-label="Open menu"
           aria-expanded={mobileMenu.isOpen}
@@ -56,7 +56,7 @@ export default function Navbar() {
       </nav>
 
       {mobileMenu.isOpen && (
-        <div className="mx-auto mt-2 max-w-7xl rounded-3xl border border-white/10 bg-brand-navy/95 px-4 py-4 shadow-xl shadow-black/20 backdrop-blur lg:hidden">
+        <div className="site-shell-width mx-auto mt-2 rounded-3xl border border-white/10 bg-brand-navy/95 px-4 py-4 shadow-xl shadow-black/20 backdrop-blur lg:hidden">
           <div className="flex flex-col gap-3 text-sm font-bold text-white/75">
             {navLinks.map((item) => (
               <NavLink

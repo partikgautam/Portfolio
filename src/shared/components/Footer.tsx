@@ -5,8 +5,8 @@ import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="mx-3 mb-3 mt-4 overflow-hidden rounded-[2rem] border border-white/10 bg-brand-blue text-white shadow-xl shadow-black/20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+    <footer className="site-footer-shell mx-auto mb-3 mt-4 overflow-hidden rounded-[2rem] border border-white/10 bg-brand-blue text-white shadow-xl shadow-black/20">
+      <div className="mx-auto grid max-w-[1180px] gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div>
           <Logo dark />
           <p className="mt-5 max-w-md text-sm leading-7 text-white/70">
